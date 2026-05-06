@@ -13,8 +13,8 @@ const is_dev = process.env.IS_DEV === "true";
 
 const cookiesOption = {
   httpOnly: true,                // ✅ correct key
-  sameSite: !is_dev ? "lax" : "none",
-  secure: is_dev,
+  sameSite: is_dev ? "lax" : "none",
+  secure: !is_dev,
   maxAge: 24 * 60 * 60 * 1000    // ✅ 1 day in ms
 };
 // used to create new user
