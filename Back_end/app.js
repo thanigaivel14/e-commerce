@@ -6,7 +6,6 @@ import userRoute from "./routers/userRoute.js"
 import ProductRoute from "./routers/productRoute.js"
 import cors from "cors"
 import OrderRoute from "./routers/orderRoute.js"
-import seedProduct from "./controller/dummyAPi.js";
 const app = express ();
 
 
@@ -28,7 +27,6 @@ app.use('/api/v1/user',userRoute);
 app.use("/api/v1/product",ProductRoute);
 app.use("/api/v1/order",OrderRoute)
 
-// seedProduct();
 app.listen(port,()=>{
     console.log(`app is running in http://localhost:${port}`)
 });
