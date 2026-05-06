@@ -64,6 +64,9 @@ else{
 }
 })
 
+const logout = asynchandler(async (req, res) => {
+  res.clearCookie('token').status(200).json({ message: 'Logged out successfully' });
+});
 //add to cart 
 const AddCart = asynchandler(async (req, res) => {
   const { productId, quantity } = req.body;
@@ -220,4 +223,4 @@ const updateAddress = asynchandler(async (req, res) => {
   });
 });
 
-export{register,login,getMe,AddCart,getCart,productQuantity,deleteCartItem,clearCart,updateAddress}
+export{register,login,getMe,logout,AddCart,getCart,productQuantity,deleteCartItem,clearCart,updateAddress}

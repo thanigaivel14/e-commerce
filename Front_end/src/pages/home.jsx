@@ -22,7 +22,7 @@ const Home = () => {
           </div>
           <div className="flex gap-4 shrink-0">
             <div className="bg-white/20 backdrop-blur rounded-2xl px-5 py-3 text-center">
-              <p className="text-2xl font-bold">Free</p>
+              <p className="text-2xl font-bold">Free Delivery</p>
               <p className="text-xs text-orange-100">on orders above ₹499</p>
             </div>
             <div className="bg-white/20 backdrop-blur rounded-2xl px-5 py-3 text-center">

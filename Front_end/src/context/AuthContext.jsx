@@ -18,12 +18,18 @@ export const AuthProvider = ({children})=>{
    SetLoading(false);
   }
  }
- const logout = () => {
+ const logout = async() => {
+  try {
+    const res = await API.post("/user/logout");
+    
+  } catch (error) {
+    console.log(error.message)
+  }
     setUser(null);
   };
 
  useEffect (()=>{
-  const publicPath =['/login','/register','/']
+  const publicPath =['/login','/register','/','/home']
 ;
    if(!publicPath.includes (window.location.pathname )){
     fetchUser();

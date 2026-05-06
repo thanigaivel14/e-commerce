@@ -45,7 +45,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     logout();
     toast.info("Logged out successfully");
-    navigate("/login");
+    navigate("/home");
     setProfileOpen(false);
   };
 

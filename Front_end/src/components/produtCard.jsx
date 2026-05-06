@@ -27,7 +27,10 @@ const ProductCard = ({ product }) => {
         </h2>
 
         <div className="flex items-center justify-between mt-auto pt-2">
-          <span className="text-xl font-bold text-orange-500">₹{product.price}</span>
+          <span className="text-xl font-bold text-orange-500">{(product.price).toLocaleString("en-IN", {
+  style: "currency",
+  currency: "INR",
+})}</span>
           <span className="text-xs text-yellow-600 font-medium bg-yellow-50 px-2 py-0.5 rounded-full">
             ⭐ {product.rating?.rate || 4.2}
           </span>
